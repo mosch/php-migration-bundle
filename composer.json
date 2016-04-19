@@ -1,0 +1,20 @@
+{
+    "name": "mosch/php-migration-bundle",
+    "version": "2.0.0",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Moritz Schwörer",
+            "email": "mr.mosch@gmail.com"
+        }
+    ],
+    "require": {
+        "mosch/php-migration": "3.0.0"
+    },
+    "require-dev": {
+        "symfony/symfony": "~2.5|~3.0",
+        "symfony/console": "~2.5|~3.0",
+        "doctrine/mongodb-odm": "1.0.5"
+    },
+    "minimum-stability": "dev"
+}

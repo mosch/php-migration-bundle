@@ -1,0 +1,8 @@
+services:
+    migrations.version_provider:
+        class: MigrationBundle\Migration\DoctrineVersionProvider
+        arguments: ["@doctrine.odm.mongodb.document_manager", "%migrations.version_class%"]
+
+    migrations.migrator:
+        class: Migration\VersionTransducer
+        arguments: ["@migrations.version_provider"]
