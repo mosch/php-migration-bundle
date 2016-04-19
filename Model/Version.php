@@ -1,5 +1,5 @@
 <?php
-namespace MigrationBundle\Document;
+namespace MigrationBundle\Model;
 
 abstract class Version
 {
