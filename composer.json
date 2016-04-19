@@ -1,6 +1,6 @@
 {
     "name": "mosch/php-migration-bundle",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "license": "MIT",
     "authors": [
         {
@@ -8,7 +8,7 @@
             "email": "mr.mosch@gmail.com"
         }
     ],
-    "psr-4": { "MigrationBundle\\": "." },
+    "psr-4": { "MigrationBundle\\": "" },
     "require": {
         "mosch/php-migration": "3.0.2"
     },
