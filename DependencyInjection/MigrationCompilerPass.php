@@ -1,6 +1,8 @@
 <?php
 namespace MigrationBundle\DependencyInjection;
 
+use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
+
 class MigrationCompilerPass implements CompilerPassInterface
 {
     public function process(ContainerBuilder $container)
