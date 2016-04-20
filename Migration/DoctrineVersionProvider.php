@@ -31,7 +31,7 @@ class DoctrineVersionProvider implements VersionProviderInterface
     public function addVersion($version)
     {
         $versionRef = new \ReflectionClass($this->versionClass);
-        $version = $versionRef->newInstance(array($version));
+        $version = $versionRef->newInstance($version);
 
         $this->om->persist($version);
         $this->om->flush();
