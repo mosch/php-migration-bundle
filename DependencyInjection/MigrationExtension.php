@@ -5,6 +5,7 @@ use MigrationBundle\DoctrineVersionProvider;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
+use Symfony\Component\DependencyInjection\Reference;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
@@ -25,15 +26,25 @@ class MigrationExtension extends Extension
         $loader->load('services.yml');
 
         $service = $container->getDefinition('migrations.migrator');
+        $migrationServices = [];
 
         foreach (new \DirectoryIterator($config['dir_name']) as $item) {
             if (!$item->isFile()) {
                 continue;
-            } 
-            
-            $class = $config[$config['namespace']] + basename($item->getFilename(), '.php');
-            $service->addMethodCall('addMigration', $class);
+            }
+            $className = basename($item->getFilename(), '.php');
+
+            $migrationDefinition = new Definition($config['namespace'] . '\\' . $className);
+            $migrationDefinition->setPublic(false);
+            $migrationServices['migration.migrations.'.strtolower($className)] = $migrationDefinition;
         }
+
+        $container->addDefinitions($migrationServices);
+
+        foreach (array_keys($migrationServices) as $id) {
+            $service->addMethodCall('addMigration', [new Reference($id)]);
+        }
+
     }
 
 }

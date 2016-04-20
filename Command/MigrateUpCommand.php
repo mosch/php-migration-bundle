@@ -2,13 +2,11 @@
 namespace MigrationBundle\Command;
 
 use Migration\VersionTransducer;
-use Symfony\Component\Console\Command\Command;
-use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class MigrateUpCommand extends Command
+class MigrateUpCommand extends ContainerAwareCommand
 {
   protected function configure()
     {
@@ -20,6 +18,9 @@ class MigrateUpCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $output->writeln(VersionTransducer::createVersionName());
+        /** @var VersionTransducer $migrator */
+        $migrator = $this->getContainer()->get('migration.migrator');
+
+        $output->writeln("There are ".count($migrator->getOpenMigrations())." migrations to be done");
     }
 }

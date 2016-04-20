@@ -26,7 +26,7 @@ class DoctrineVersionProvider implements VersionProviderInterface
     }
 
     /**
-     * @param $version
+     * @param  $version
      */
     public function addVersion($version)
     {
