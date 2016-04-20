@@ -14,7 +14,7 @@ class Configuration implements ConfigurationInterface
         $rootNode
             ->children()
                 ->scalarNode('namespace')->defaultValue('Application\Migrations')->cannotBeEmpty()->end()
-                ->scalarNode('dir_name')->defaultValue('%kernel.root_dir%/Migrations')->cannotBeEmpty()->end()
+                ->scalarNode('dir_name')->cannotBeEmpty()->end()
                 ->scalarNode('version_class')->cannotBeEmpty()->end()
             ->end()
         ;

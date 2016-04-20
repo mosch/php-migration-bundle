@@ -24,13 +24,8 @@ class MigrationExtension extends Extension
         );
         $loader->load('services.yml');
 
-        $doctrineProvider = new Definition(DoctrineVersionProvider::class);
-        $doctrineProvider->setArguments();
+        $service = $container->getDefinition('migrations.migrator');
 
-        $container->addDefinitions([
-            'migrations.doctrine_provider' => $doctrineProvider,
-        ]);
-        //version_class
         foreach (new \DirectoryIterator($config['dir_name']) as $item) {
             if (!$item->isFile()) {
                 continue;
