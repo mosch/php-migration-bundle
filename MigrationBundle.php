@@ -12,7 +12,7 @@ class MigrationBundle extends Bundle
     {
         parent::build($container);
 
-        $container->addCompilerPass(new MigrationCompilerPass())
+        $container->addCompilerPass(new MigrationCompilerPass());
     }
 
     public function getContainerExtension()
