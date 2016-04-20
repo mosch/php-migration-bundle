@@ -7,7 +7,9 @@
             "email": "mr.mosch@gmail.com"
         }
     ],
-    "psr-4": { "MigrationBundle\\": "" },
+    "autoload": {
+        "psr-4": { "MigrationBundle\\": "" }
+    },
     "require": {
         "mosch/php-migration": "dev-master"
     },

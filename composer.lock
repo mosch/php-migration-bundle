@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fa13a1e043b1005a3c2c5ae8aecb7c9e",
+    "hash": "3e3d7420c367ba42bfb014b0cd7b8630",
     "content-hash": "91ed955255e7ec33f79859618faa7efd",
     "packages": [
         {
@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mosch/php-migration.git",
-                "reference": "72c92f676f6f74d829fa967b750233e804f46da4"
+                "reference": "6624472dacec121d48800776bd3f3caa0569aeaa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mosch/php-migration/zipball/72c92f676f6f74d829fa967b750233e804f46da4",
-                "reference": "72c92f676f6f74d829fa967b750233e804f46da4",
+                "url": "https://api.github.com/repos/mosch/php-migration/zipball/6624472dacec121d48800776bd3f3caa0569aeaa",
+                "reference": "6624472dacec121d48800776bd3f3caa0569aeaa",
                 "shasum": ""
             },
             "require-dev": {
@@ -36,7 +36,7 @@
                 }
             ],
             "description": "Simple and lean migrations in php.",
-            "time": "2016-04-19 14:42:11"
+            "time": "2016-04-20 08:05:36"
         }
     ],
     "packages-dev": [
@@ -1081,12 +1081,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "114fca31269dbbcc4f593c99fb1fe2563664b908"
+                "reference": "8e67eab2022041ce2503ff895d278d1511a524c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/114fca31269dbbcc4f593c99fb1fe2563664b908",
-                "reference": "114fca31269dbbcc4f593c99fb1fe2563664b908",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/8e67eab2022041ce2503ff895d278d1511a524c0",
+                "reference": "8e67eab2022041ce2503ff895d278d1511a524c0",
                 "shasum": ""
             },
             "require": {
@@ -1207,7 +1207,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2016-04-19 15:18:49"
+            "time": "2016-04-20 06:30:26"
         },
         {
             "name": "twig/twig",
