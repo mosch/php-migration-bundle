@@ -13,18 +13,23 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mosch/php-migration.git",
-                "reference": "6624472dacec121d48800776bd3f3caa0569aeaa"
+                "reference": "f0edec597cad2bf511e6c0e7fb7b7eff64ad4272"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mosch/php-migration/zipball/6624472dacec121d48800776bd3f3caa0569aeaa",
-                "reference": "6624472dacec121d48800776bd3f3caa0569aeaa",
+                "url": "https://api.github.com/repos/mosch/php-migration/zipball/f0edec597cad2bf511e6c0e7fb7b7eff64ad4272",
+                "reference": "f0edec597cad2bf511e6c0e7fb7b7eff64ad4272",
                 "shasum": ""
             },
             "require-dev": {
                 "phpunit/phpunit": "5.3.*"
             },
             "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Migration\\": "src/"
+                }
+            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
@@ -36,7 +41,7 @@
                 }
             ],
             "description": "Simple and lean migrations in php.",
-            "time": "2016-04-20 08:05:36"
+            "time": "2016-04-20 08:12:10"
         }
     ],
     "packages-dev": [
