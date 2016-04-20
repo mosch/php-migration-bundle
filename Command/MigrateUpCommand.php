@@ -1,5 +1,5 @@
 <?php
-namespace AppBundle\Command;
+namespace MigrationBundle\Command;
 
 use Migration\VersionTransducer;
 use Symfony\Component\Console\Command\Command;
