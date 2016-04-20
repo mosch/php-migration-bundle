@@ -19,7 +19,7 @@ class MigrateUpCommand extends ContainerAwareCommand
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         /** @var VersionTransducer $migrator */
-        $migrator = $this->getContainer()->get('migration.migrator');
+        $migrator = $this->getContainer()->get('migrations.migrator');
 
         $output->writeln("There are ".count($migrator->getOpenMigrations())." migrations to be done");
     }

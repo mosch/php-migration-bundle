@@ -6,11 +6,6 @@ abstract class Version
     /**
      * @var string
      */
-    protected $id;
-
-    /**
-     * @var string
-     */
     protected $name;
 
     /**

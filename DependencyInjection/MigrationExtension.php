@@ -36,7 +36,7 @@ class MigrationExtension extends Extension
 
             $migrationDefinition = new Definition($config['namespace'] . '\\' . $className);
             $migrationDefinition->setPublic(false);
-            $migrationServices['migration.migrations.'.strtolower($className)] = $migrationDefinition;
+            $migrationServices['migrations.migrations.'.strtolower($className)] = $migrationDefinition;
         }
 
         $container->addDefinitions($migrationServices);
